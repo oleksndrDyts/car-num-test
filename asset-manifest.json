@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/car-num-test/static/css/main.91b1c80a.css",
+    "main.js": "/car-num-test/static/js/main.1c11f6d8.js",
+    "index.html": "/car-num-test/index.html",
+    "main.91b1c80a.css.map": "/car-num-test/static/css/main.91b1c80a.css.map",
+    "main.1c11f6d8.js.map": "/car-num-test/static/js/main.1c11f6d8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.91b1c80a.css",
+    "static/js/main.1c11f6d8.js"
+  ]
+}
