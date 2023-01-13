@@ -22,17 +22,23 @@ const CarNumInfo = ({ numbers, type, filter }) => {
   }
 
   return (
-    <ul>
-      {numbers.map(number => (
-        <ListItem key={number.number}>
-          <CarNumItem item={number} />
-        </ListItem>
-      ))}
-    </ul>
+    <ComponentContainer>
+      <ul>
+        {numbers.map(number => (
+          <ListItem key={number.number}>
+            <CarNumItem item={number} />
+          </ListItem>
+        ))}
+      </ul>
+    </ComponentContainer>
   );
 };
 
 export default CarNumInfo;
+
+const ComponentContainer = styled.div`
+  border-radius: 6px;
+`;
 
 const ListItem = styled.li`
   :not(:last-child) {

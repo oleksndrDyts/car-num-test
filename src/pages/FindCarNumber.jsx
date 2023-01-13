@@ -9,6 +9,7 @@ import { Container } from '../components/Utils/Container.styled';
 
 import numbers from '../car-numbers-ua.json';
 import { useState } from 'react';
+import CarNumSelect from 'components/CarNumSelect';
 
 const FindCarNumber = () => {
   const [typeOfSearch, setTypeOfSearch] = useState('byNumber');
@@ -34,10 +35,7 @@ const FindCarNumber = () => {
           type={typeOfSearch}
         />
 
-        <Select name="type" id="type" onChange={onSelectHandleChange}>
-          <option value="byNumber">Пошук по номерах</option>
-          <option value="byRegion">Пошук по областях</option>
-        </Select>
+        <CarNumSelect onSelect={onSelectHandleChange} />
 
         <CarNumInfo
           numbers={filteredNumbers}
@@ -57,7 +55,7 @@ const PageContainer = styled.div`
   align-items: center;
 `;
 
-const Select = styled.select`
-  margin-top: 10px;
-  margin-bottom: 10px;
-`;
+// const Select = styled.select`
+//   margin-top: 10px;
+//   margin-bottom: 10px;
+// `;

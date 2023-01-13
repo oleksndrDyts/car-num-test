@@ -2,6 +2,8 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import { Transition } from 'react-transition-group';
 
+import CarNumbers from './CarNumbers';
+
 const CarNumItem = ({ item, show = false }) => {
   const [showDetail, setShowDetail] = useState(show || false);
 
@@ -18,18 +20,15 @@ const CarNumItem = ({ item, show = false }) => {
         <ItemLocationText>{item.location}</ItemLocationText>
       </ItemLocationContainer>
       {/* {showDetail && ( */}
-      <Transition in={showDetail} timeout={300} mountOnEnter unmountOnExit>
-        {state => {
-          console.log(state);
-          return (
-            <ItemDetailedContainer animate={state} className={state}>
-              <ItemDetailText showDetail={showDetail}>
-                {item.where} використовують такі номерні знаки :
-                {' ' + item.number.join(' ').slice(6)}
-              </ItemDetailText>
-            </ItemDetailedContainer>
-          );
-        }}
+      <Transition in={showDetail} timeout={250} mountOnEnter unmountOnExit>
+        {state => (
+          <ItemDetailedContainer animate={state} className={state}>
+            <ItemDetailText>
+              {item.where} використовують такі номерні знаки
+            </ItemDetailText>
+            <CarNumbers numbers={item.number} />
+          </ItemDetailedContainer>
+        )}
       </Transition>
       {/* )} */}
     </ComponentContainer>
@@ -40,7 +39,8 @@ export default CarNumItem;
 
 const ComponentContainer = styled.div`
   position: relative;
-
+  z-index: 50;
+  background-color: white;
   width: 90vw;
 
   border-radius: 6px;
@@ -75,10 +75,13 @@ const ItemLocationText = styled.p`
 const ItemDetailedContainer = styled.div`
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
 
   background-color: yellow;
+
+  text-align: center;
+
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
 
@@ -87,7 +90,6 @@ const ItemDetailedContainer = styled.div`
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 
   &.entering {
     -webkit-transform: translateY(0);
@@ -113,10 +115,6 @@ const ItemDetailedContainer = styled.div`
 `;
 
 const ItemDetailText = styled.p`
-  /* margin-top: 10px; */
-  position: relative;
-
-  font-size: 18px;
-
-  text-align: center;
+  /* text-align: center;
+  font-size: 17px; */
 `;
