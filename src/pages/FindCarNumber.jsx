@@ -53,6 +53,9 @@ const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  padding-top: 80px;
+  padding-bottom: 40px;
 `;
 
 // const Select = styled.select`

@@ -33,7 +33,7 @@ const NumberFilterInput = ({ onChange, value, numberLetters = false }) => {
 export default NumberFilterInput;
 
 const ComponentContainer = styled.div`
-  margin-top: 10px;
+  /* margin-top: 10px; */
   display: ${p => (p.numberLetters ? 'inline-flex' : 'flex')};
 
   scale: ${p => (p.numberLetters ? 0.8 : 1)};

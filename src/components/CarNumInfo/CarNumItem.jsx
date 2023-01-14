@@ -39,9 +39,9 @@ export default CarNumItem;
 
 const ComponentContainer = styled.div`
   position: relative;
-  z-index: 50;
+  z-index: 1;
   background-color: white;
-  width: 90vw;
+  width: 88vw;
 
   border-radius: 6px;
 
@@ -52,6 +52,8 @@ const ComponentContainer = styled.div`
 const ItemLocationContainer = styled.div`
   position: relative;
   z-index: 100;
+
+  width: 100%;
 
   padding-top: 20px;
   padding-bottom: 20px;

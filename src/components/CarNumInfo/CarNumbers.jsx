@@ -24,6 +24,8 @@ const List = styled.ul`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+
+  margin-top: 10px;
 `;
 
 const ListItem = styled.li`
