@@ -18,6 +18,7 @@ const AppBar = () => {
   const navItems = [
     { path: '/', label: 'Головна' },
     { path: '/find-car-num', label: 'Пошук номерів' },
+    { path: '/fuel-calc', label: 'Розрахунок палива' },
   ];
 
   return (

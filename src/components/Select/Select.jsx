@@ -1,17 +1,20 @@
 import styled from 'styled-components';
 
-const CarNumSelect = ({ onSelect }) => {
+const Select = ({ onSelect, items }) => {
   return (
     <ComponentContainer>
-      <Select name="type" id="type" onChange={onSelect}>
-        <option value="byNumber">Пошук по номерах</option>
-        <option value="byRegion">Пошук по областях</option>
-      </Select>
+      <SelectStyled name="type" id="type" onChange={onSelect}>
+        {items.map(({ value, label }) => (
+          <option key={value} value={value}>
+            {label}
+          </option>
+        ))}
+      </SelectStyled>
     </ComponentContainer>
   );
 };
 
-export default CarNumSelect;
+export default Select;
 
 const ComponentContainer = styled.div`
   position: relative;
@@ -42,11 +45,11 @@ const ComponentContainer = styled.div`
   align-items: center; */
 `;
 
-const Select = styled.select`
+const SelectStyled = styled.select`
   /* width: 202px; */
 
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 
   padding-top: 5px;
   padding-bottom: 5px;

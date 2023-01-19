@@ -1,15 +1,16 @@
+import { useState } from 'react';
 import styled from 'styled-components';
 
 import CarNumInfo from '../components/CarNumInfo';
 import NumberFilter from '../components/NumberFilter';
-
-import { filterNumbers } from '../helpers/filterNumbers';
+import Select from 'components/Select';
 
 import { Container } from '../components/Utils/Container.styled';
 
-import numbers from '../car-numbers-ua.json';
-import { useState } from 'react';
-import CarNumSelect from 'components/CarNumSelect';
+import { filterNumbers } from '../helpers/filterNumbers';
+
+import numbers from '../data/car-numbers-ua.json';
+import { carNumSelectItems } from 'data/selectItems';
 
 const FindCarNumber = () => {
   const [typeOfSearch, setTypeOfSearch] = useState('byNumber');
@@ -35,7 +36,7 @@ const FindCarNumber = () => {
           type={typeOfSearch}
         />
 
-        <CarNumSelect onSelect={onSelectHandleChange} />
+        <Select onSelect={onSelectHandleChange} items={carNumSelectItems} />
 
         <CarNumInfo
           numbers={filteredNumbers}

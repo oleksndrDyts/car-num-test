@@ -23,7 +23,7 @@ const Link = styled(NavLink)`
 `;
 
 const Car = styled.span`
-  color: black;
+  color: white;
 `;
 const Num = styled.span`
   color: red;

@@ -8,7 +8,6 @@ const Burger = ({ inProp, onBurgerClick, children }) => {
   const targetEl = useRef(null);
 
   useEffect(() => {
-    console.log('useEffect');
     if (inProp) {
       disableBodyScroll(targetEl);
     }
@@ -101,7 +100,7 @@ const BurgerContainer = styled.div`
     height: 5px;
     border-radius: 21px;
     transition: all 0.3s ease 0s;
-    background-color: black;
+    background-color: white;
 
     width: 100%;
   }
@@ -125,7 +124,7 @@ const MiddleLine = styled.span`
   height: 5px;
   border-radius: 21px;
   transition: all 0.3s ease 0s;
-  background-color: black;
+  background-color: white;
 
   width: 100%;
 

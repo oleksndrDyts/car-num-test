@@ -26,9 +26,14 @@ const List = styled.ul`
   flex-direction: column;
 `;
 
-const ListItem = styled.li``;
+const ListItem = styled.li`
+  :not(:last-child) {
+    margin-bottom: 15px;
+  }
+`;
 
 const NavItem = styled(NavLink)`
+  font-size: 24px;
   text-decoration: none;
   color: white;
 
