@@ -20,7 +20,7 @@ const FuelCalcForm = ({ setState, type }) => {
   useEffect(() => {
     resetField('distance');
     resetField('consumption');
-  }, [type]);
+  }, [type, resetField]);
 
   return (
     <Form onChange={handleSubmit(onFormChange)}>
