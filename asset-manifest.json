@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/car-num-test/static/css/main.91b1c80a.css",
-    "main.js": "/car-num-test/static/js/main.cbe68a5f.js",
+    "main.js": "/car-num-test/static/js/main.6ba0ae67.js",
     "index.html": "/car-num-test/index.html",
     "main.91b1c80a.css.map": "/car-num-test/static/css/main.91b1c80a.css.map",
-    "main.cbe68a5f.js.map": "/car-num-test/static/js/main.cbe68a5f.js.map"
+    "main.6ba0ae67.js.map": "/car-num-test/static/js/main.6ba0ae67.js.map"
   },
   "entrypoints": [
     "static/css/main.91b1c80a.css",
-    "static/js/main.cbe68a5f.js"
+    "static/js/main.6ba0ae67.js"
   ]
 }
